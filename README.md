@@ -81,7 +81,7 @@ Took 0m0.003s
 ```
 
 3. From commandline with print out : ``behave test.feature --no-capture``
-4. From commandline with no print out( all tests): ``behave --no-capture``
+4. From commandline with no print out( all tests): ``behave``
 
 
 ```
