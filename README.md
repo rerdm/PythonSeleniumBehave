@@ -3,10 +3,24 @@
 ### Preconditions
 
 1. Install Gherkin-Plugin in > File > Settings > Plugins > Gherkin (IntelliJ)
-2. Install Selenium : ``pip install selenium``
-3. Install Selenium : ``pip install behave``
+2. Install selenium : ``pip install selenium``
+3. Install behave : ``pip install behave``
 ----
+
+### Folder-Structure
+
+1. Create a folder in which you step-definitions, and you feature files will be stored.
+2. Create a folder `Steps` in this location, here your step-definition files should be stored.
+3. Place the feature also in teh same location like the `Steps` folder or create a subfolder for the feature-files.
+
+----
+
 ###  Creating Feature-File ( Given , When, Then, And, But )
+
+- <b>Given</b>: - Used for precondition, set up actions, no interactions <br>
+- <b>When</b>: - Interaction with the application, act something <br>
+- <b>Then</b>: - Verification, Exception <br>
+- <b>And & But</b>: - Represent the preceding key word ( 'Given', 'Then') <br>
 
 1. Crate Feature-File and saveit as:  `your_name.feature`
 
@@ -14,9 +28,9 @@
 Feature: Login as valid user (Test-Set)
     Scenario: login an existing user ( Test-Case )
         
-            Given I go to the Login page
-            When I click on login 
-            Then I should see error
+            Given I go to the Login page (Precondition)
+            When I click on login (Step)
+            Then I should see error (Rusult)
 ```
 ----
 
@@ -58,10 +72,10 @@ def step_impl(context):
 
 ----
 
-### Run the test with behave
+### Run the test with behave (print and logging)
 
-1. From commandline with no print out: ``behave test.feature``
-2. From commandline with print out(all tests): ``behave``
+1. From commandline with no print and logging output: ``behave test.feature``
+2. From commandline with print and logging output (all tests): ``behave``
 
 ```
 Feature: Logging in with valid credentials # test.feature:1
@@ -80,8 +94,8 @@ Took 0m0.003s
 
 ```
 
-3. From commandline with print out : ``behave test.feature --no-capture``
-4. From commandline with no print out( all tests): ``behave``
+3. From commandline with print and logging outputs : ``behave test.feature --no-capture``
+4. From commandline with no print and logging outputs( all tests): ``behave``
 
 
 ```
@@ -114,4 +128,9 @@ Took 0m0.003s
 
 ````
 
+### Logging 
+
+``behave test1.feature --no-capture --no-logcapture`` <br>
+
+----
 

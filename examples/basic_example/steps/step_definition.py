@@ -1,12 +1,12 @@
 
 from behave import given, when, then
+import logging as logger
 
 
 @given(u'I create a new user')
 def step_impl(context):
     print("I create a new user")
     # raise NotImplementedError(u'STEP: Given I create a new user')
-
 
 @when(u'I type email')
 def step_impl(context):
