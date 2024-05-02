@@ -136,12 +136,15 @@ Took 0m0.003s
 
 ### Creating a setup.py
 
-1. Create a `setup.py` file ( See template located in examples/test/)
-2. List all Packages (Folder) where your packages ar stored inside the setup.py
-3. If you create new folders in your Project with new Functions you have to add them in the List
-   and run the command again
-4. Run the setup.py `python setup.py install` or `python setup.py develop`
-5. This will Create several folders: <br>- PythonSeleniumBehaveBDD.egg-info <br> - build ( Containing the imported folders ) <br>- dist
+1. Create a `setup.py` file (See template located in examples/test/)
+   - packages=find_packages() - will find all your python package in the project (`__ini__`)
+2. Run the setup.py `python setup.py install` or `python setup.py develop`
+3. This will Create several folders: 
+   - PythonSeleniumBehaveBDD.egg-info 
+   - build ( Containing the imported folders - this is the importing path for other programms) 
+   - dist ( Creating distributions)
+4. Re-install (after creating\adapting files) `python "..\PythonSeleniumBehave\examples\setup.py" install`
+5. <b>NOTE</b>: The packages will be imported from `build>lib` location !!!
 
-6. Reinstall (after creating\adapting files)<br>
-  `python "..\PythonSeleniumBehave\examples\setup.py" install`
+----
+
